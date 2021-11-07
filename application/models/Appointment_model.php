@@ -14,17 +14,17 @@ class Appointment_model extends CI_Model {
     		'gender'=>$this->input->post('genderField'),
     		'email'=>$this->input->post('emailField'),
     		'phone'=>$this->input->post('phoneField'),
-            'address'=>$this->input->post('addressField'),
-            'file_url'=>$file_name,
-            'message'=>$this->input->post('messageField'),
-            'date'=>$this->input->post('dateField'),
-            'time_slots'=>$this->input->post('timeField'),
-            'branch'=>$this->input->post('branchField'),
-            'terms_agreed'=>$this->input->post('termsField'),
+         'address'=>$this->input->post('addressField'),
+         'file_url'=>$file_name,
+         'message'=>$this->input->post('messageField'),
+         'date'=>$this->input->post('dateField'),
+         'time_slots'=>$this->input->post('timeField'),
+         'branch'=>$this->input->post('branchField'),
+          'terms_agreed'=>$this->input->post('termsField'),
     	);
        // print_r($data);exit;
     		if($appointment_id==0){
-    		//	echo "heere";exit;
+    			//echo "heere";exit;
     			return $this->db->insert('appointment_setup',$data);
     		}else{
     		//	echo "not there";exit;
@@ -33,16 +33,17 @@ class Appointment_model extends CI_Model {
     		}
      }
 
-     public function get_package(){
+     public function get_appointment(){
         $this->db->select('*');
-        $query = $this->db->get('package_setup');
+        $query = $this->db->get('appointment_setup');
         return $query->result_array();
      }
 
 
-     public function delete_package($package_id){      
-        $this->db->where('package_id', $package_id);
-        return $this->db->delete('package_setup');
+     public function delete_appointment($appointment_id){    
+     
+        $this->db->where('appointment_id', $appointment_id);
+        return $this->db->delete('appointment_setup');
         
      }
 

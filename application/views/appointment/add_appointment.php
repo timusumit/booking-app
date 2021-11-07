@@ -101,7 +101,7 @@
                         </div>
 
                         <div class="mb-3 col-md-6">
-                            <label for="branchField" class="form-label">Branch</label>
+                            <label for="branchField" class="form-label">Bank Branch</label>
                             <select name="branchField" id="branchField" class="form-select">
                               <option value="KTM">Kathmandu</option>
                               <option value="PKR">Pokhara</option>
@@ -112,6 +112,7 @@
                         <div class="mb-3 col-md-6">
                             <label for="fileField" class="form-label">Attachment (Optional)</label>
                             <input type="file" name="fileField" class="form-control" id="fileField" >
+                            <small><b>File Types</b> :image annd documents only</small>
                         </div>
                         <div class="mb-3 col-md-6">
                         <input type="checkbox"  id="termsField" name="termsField">&nbsp;<label for="termsField" class="form-label">I agree terms and conditions.</label>       

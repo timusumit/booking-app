@@ -30,7 +30,7 @@ class Appointment extends CI_controller {
     {
 	
             $config['upload_path']          = './assets/frontend/images';
-            $config['allowed_types']        = 'gif|jpg|png';
+            $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf|doc|docx|xls|xlsx';
 
 
             $this->load->library('upload', $config);
@@ -57,10 +57,10 @@ class Appointment extends CI_controller {
 				   if($this->form_validation->run()==FALSE){	
 				
 					$data = array('upload_data' => $this->upload->data());
-					$this->display('appointment/add_appointment',$data['upload_data']['file_name']);
+					$this->display('appointment/add_appointment',$data['upload_data']['file_path']);
 				}else{
 					$data = array('upload_data' => $this->upload->data());
-					$this->appointment_model->add_appointment($appointment_id=0,$data['upload_data']['file_name']);
+					$this->appointment_model->add_appointment($appointment_id=0,$data['upload_data']['file_path']);
 					$this->session->set_flashdata('Success','Appointmnet made successfully!');
 					redirect('appointment');
 				}
@@ -70,6 +70,28 @@ class Appointment extends CI_controller {
             // }
     }
 
+
+	public function edit(){
+	
+		$appointment_id=$this->uri->segment(3);
+		if(empty($appointment_id)){
+			show_404();
+		}
+	
+		$this->appointment_model->add_appointment($appointment_id,$file_url);
+		redirect('admin/appointment_admin');
+	}
+	
+
+public function delete(){
+	
+	$appointment_id= $this->uri->segment(3);
+	if(empty($appointment_id)){
+	   show_404();
+	}
+	$this->appointment_model->delete_appointment($appointment_id);
+	redirect('admin/appointment_admin');
+}
 
 }
     
