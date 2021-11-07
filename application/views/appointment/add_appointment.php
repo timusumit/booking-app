@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-lg-12">
           <div class="navbar navbar-light bg-light fixed-top">
                 <div class="container-fluid">
@@ -26,7 +26,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-12 form-wrap">
+        <div class="col-lg-8 col-md-10 form-wrap">
             
             <?php if(!empty(validation_errors())){?>
                         <div class="alert alert-danger"> <?php echo validation_errors(); ?></div>
@@ -47,7 +47,7 @@
                         </div>
                         <div class="mb-3 col-md-6">
                             <label for="genderField" class="form-label">Gender</label>
-                          <select name="genderField" id="genderField" class="form-select">
+                          <select name="genderField" id="genderField" class="form-select" value="<?php echo set_value('genderField'); ?>">
                               <option value="male">Male</option>
                               <option value="female">Female</option>
                               <option value="other">Other</option>
@@ -56,20 +56,20 @@
 
                         <div class="mb-3 col-md-6">
                             <label for="emailField" class="form-label">Email</label>
-                            <input type="email" name="emailField" class="form-control" id="emailField" placeholder="timusumit@gmail.com">
+                            <input type="email" name="emailField" class="form-control" id="emailField" placeholder="timusumit@gmail.com" value="<?php echo set_value('emailField'); ?>">
                         </div>
                         <div class="mb-3 col-md-6">
                             <label for="phoneField" class="form-label">Phone</label>
-                            <input type="number" name="phoneField" class="form-control" id="phoneField" placeholder="9841361466">
+                            <input type="number" name="phoneField" class="form-control" id="phoneField" placeholder="9841361466" value="<?php echo set_value('phoneField'); ?>">
                         </div>
 
                         <div class="mb-3 col-md-6">
                             <label for="addressField" class="form-label">Address</label>
-                            <input type="text" name="addressField" class="form-control" id="addressField" placeholder="Kirtipur-3">
+                            <input type="text" name="addressField" class="form-control" id="addressField" placeholder="Kirtipur-3" value="<?php echo set_value('addressField'); ?>">
                         </div>
                         <div class="mb-3 col-md-6">
                             <label for="messageField" class="form-label">Message</label>
-                           <textarea name="messageField" class="form-control" name="message" id="messageField"></textarea>
+                           <textarea name="messageField" class="form-control" name="message" id="messageField" value="<?php echo set_value('messageField'); ?>"></textarea>
                         </div>
                         <div class="clearfix"></div>
                        
@@ -77,11 +77,11 @@
 
                         <div class="mb-3 col-md-6">
                             <label for="dateField" class="form-label">Date</label>
-                            <input name="dateField" type="date" class="form-control" id="dateField" >
+                            <input name="dateField" type="date" class="form-control" id="dateField" value="<?php echo set_value('dateField'); ?>">
                         </div>
                         <div class="mb-3 col-md-6">
                             <label for="timeField" class="form-label">Time Slot</label>
-                            <select name="timeField" id="timeField" class="form-select">
+                            <select name="timeField" id="timeField" class="form-select" value="<?php echo set_value('timeField'); ?>">
                               <option value="10:00AM-10:30AM">10:00AM-10:30AM</option>
                               <option value="10:30AM-11:00AM">10:30AM-11:00AM</option>
                               <option value="11:00AM-11:30AM">11:00AM-11:30AM</option>
@@ -102,7 +102,7 @@
 
                         <div class="mb-3 col-md-6">
                             <label for="branchField" class="form-label">Bank Branch</label>
-                            <select name="branchField" id="branchField" class="form-select">
+                            <select name="branchField" id="branchField" class="form-select" value="<?php echo set_value('branchField'); ?>">
                               <option value="KTM">Kathmandu</option>
                               <option value="PKR">Pokhara</option>
                               <option value="BKT">Bhaktapur</option>
@@ -111,13 +111,13 @@
                         </div>
                         <div class="mb-3 col-md-6">
                             <label for="fileField" class="form-label">Attachment (Optional)</label>
-                            <input type="file" name="fileField" class="form-control" id="fileField" >
+                            <input type="file" name="fileField" class="form-control" id="fileField" value="<?php echo set_value('fileField'); ?>">
                             <small><b>File Types</b> :image annd documents only</small>
                         </div>
                         <div class="mb-3 col-md-6">
                         <input type="checkbox"  id="termsField" name="termsField">&nbsp;<label for="termsField" class="form-label">I agree terms and conditions.</label>       
                         </div>
-                        <div class="mb-3 col-md-4">
+                        <div class="mb-3 col-md-6">
                             <button class="btn btn-success" type="submit">Book an appointment</button>
                             <button class="btn btn-secondary" type="reset">Cancel</button>
                         </div> 

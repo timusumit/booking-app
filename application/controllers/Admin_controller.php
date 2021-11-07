@@ -9,7 +9,7 @@ class Admin_controller extends CI_Controller {
 		$this->load->helper(array('form', 'url'));
 		$this->load->library(array('session', 'form_validation'));
 		$this->load->model('admin_model');
-		$this->load->model('package_setup_model');
+		$this->load->model('appointment_model');
 		 if (!$this->session->userdata('is_logged_in')) {
             redirect(site_url('user/login'));
         } 
@@ -31,13 +31,7 @@ public function display($view,$data){
 	public function index()
 	{
 		$data['titlename']=$this->admin_model->get_logged_user();
-		$data['package_setup']=$this->package_setup_model->get_package();
-		$this->display('test',$data);
+		$data['package_book']=$this->appointment_model->get_appointment();
+		$this->display('welcome',$data);
 	}
-
-
-
-	
-
-
 }

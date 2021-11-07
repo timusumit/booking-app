@@ -1,4 +1,3 @@
-
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 //include_once(APPPATH.'controllers/Admin_controller.php');
@@ -30,7 +29,7 @@ class Appointment extends CI_controller {
     {
 	
             $config['upload_path']          = './assets/frontend/images';
-            $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf|doc|docx|xls|xlsx';
+            $config['allowed_types']        = 'gif|jpg|png|pdf|doc|xls|txt';
 
 
             $this->load->library('upload', $config);
@@ -46,6 +45,7 @@ class Appointment extends CI_controller {
             // }
             // else
             // {
+				$this->upload->do_upload('fileField');
 			 	$this->form_validation->set_rules('nameField','Name', 'required');
 				$this->form_validation->set_rules('emailField','Email Address', 'required','is_unique');
 				$this->form_validation->set_rules('phoneField','Phone', 'required');
@@ -92,6 +92,4 @@ public function delete(){
 	$this->appointment_model->delete_appointment($appointment_id);
 	redirect('admin/appointment_admin');
 }
-
 }
-    

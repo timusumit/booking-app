@@ -22,7 +22,7 @@
             <div class="auth-box bg-dark border-top border-secondary">
                 <div id="loginform">
                     <div class="text-center p-t-20 p-b-20">
-                        <span class="db"><img src="<?php echo base_url();?>assets/images/logo.png" alt="logo" /></span>
+                        <span class="db"><h2 class="text-success">Login</h2></span>
                     </div>
                     <!-- Form -->
                   <?php $attributes = array("name" => "loginform");

@@ -14,8 +14,14 @@ body {
 .form-wrap{
     margin-top: 68px;
 }
-
+.form-wrap .card{
+	background:#edeeed;
+}
 .table-minified tr th, .table-minified tr td{
 	padding:2px;
 	font-size: 12px;
+}
+
+.navbar.navbar-light.bg-light.fixed-top{
+	background:#edeeed;
 }
