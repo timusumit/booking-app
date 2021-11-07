@@ -1,0 +1,1 @@
+ALTER TABLE `package_book` ADD `booking_status` VARCHAR(50) NOT NULL AFTER `requirements`;

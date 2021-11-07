@@ -1,0 +1,58 @@
+/*Author:Sumt Maharjan*/
+body{
+	    font-family: open sans,sans-serif;
+}
+
+table th{
+	font-weight: bold !important;
+	color:#333 !important;
+}
+.table-bordered td, .table-bordered th {
+    border: 1px solid #000;
+}
+
+
+.main_body{
+background:url('../../images/background/img5.jpg');
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+height: 100%;
+padding: 15px 0;
+margin-top:56px;
+margin-bottom: 20px;
+}
+.strike-through{
+	text-decoration: line-through;
+}
+.hidden{
+	display: none !important;
+}
+.box-body{
+	    min-height: 480px;
+    padding-top: 30px;
+}
+.mar-25-btm{
+	margin-bottom: 25px;
+}
+h6.font-italic.font-weight-light.text-info{
+	font-size:0.75rem !important;
+}
+.wid130{
+	min-width: 130px;
+}
+.pad_fix{
+	padding:0;
+}
+.box-form{
+	padding:25px;
+}
+@media screen and (max-width: 390px){
+	.col-md-auto{
+		padding:5px;
+	}
+	.box-form{
+		padding:10px;
+	}
+}
